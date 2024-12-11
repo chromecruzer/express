@@ -1,0 +1,20 @@
+{
+  "name": "express-starter",
+  "scripts": {
+    "dev": "tsx watch --inspect src/index.js",
+    "build": "node esbuild.config.cjs",
+    "start": "node --max-old-space-size=512 bundle.main.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "pug": "^3.0.3",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "esbuild": "^0.24.0",
+    "tsx": "^4.7.1"
+  }
+}
