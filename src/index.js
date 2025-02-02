@@ -7,6 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Set Pug as the view engine
 app.set('view engine', 'pug');
+app.use(express.static('public'))
 
 // Modify the views directory path
 //app.set('views', path.join(__dirname, 'custom_views'));

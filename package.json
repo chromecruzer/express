@@ -2,8 +2,9 @@
   "name": "express-starter",
   "scripts": {
     "dev": "tsx watch --inspect src/index.js",
-    "build": "node esbuild.config.cjs",
-    "start": "node --max-old-space-size=512 bundle.main.js"
+    "build": "node esbuild.config.cjs && npx tailwindcss -i ./views/main.css -o ./public/tailwind.css --minify",
+    "start": "node --max-old-space-size=512 bundle.main.js",
+    "client": "npx tailwindcss -i ./views/main.css -o ./public/tailwind.css --watch"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@types/node": "^20.11.17",
     "esbuild": "^0.24.0",
+    "tailwindcss": "^3.4.17",
     "tsx": "^4.7.1"
   }
 }
